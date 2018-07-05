@@ -1,9 +1,13 @@
 {
-  "name": "tfk-kaffe",
+  "name": "rate-coffee",
   "version": "1.0.0",
-  "description": "Bark eller brygg?",
+  "description": "does the coffee taste like bark or brew?",
   "main": "server.js",
-  "author": "",
+  "author": {
+    "name": "Jonas Enge",
+    "email": "jonas.enge@t-fk.no",
+    "url": "https://github.com/telemark"
+  },
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
