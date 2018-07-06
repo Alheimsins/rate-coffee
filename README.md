@@ -2,7 +2,7 @@
 
 Does the coffee taste like bark or brew?
 
-Coffee rating system based on the awesome realtime, decentralized, offline-first, graph database - [gundb](http://gun.js.org/), GPS-locatation, and google places API.
+Coffee rating system based on the awesome realtime, decentralized, offline-first, graph database - [gundb](http://gun.js.org/), GPS-location, and google places API.
 
 ## Demo
 
