@@ -5,8 +5,6 @@ if (dev) {
 const routes = require('./routes')
 const next = require('next')
 const { createServer } = require('http')
-const { tmpdir } = require('os')
-const Gun = require('gun')
 const port = parseInt(process.env.PORT, 10) || 3000
 const app = next({ dev })
 const handle = routes.getRequestHandler(app)
@@ -15,26 +13,6 @@ const { serverRuntimeConfig: { GOOGLE_API_TOKEN } } = require('./next.config')
 const { parse } = require('url')
 const { join } = require('path')
 const fs = require('fs').promises
-
-const storeConfig = () => {
-  const useS3 = process.env.AWS_ACCESS_KEY_ID && process.env.AWS_SECRET_ACCESS_KEY && process.env.AWS_S3_BUCKET
-  if (useS3) {
-    console.log('> s3 storage configured')
-    console.log(`> bucket ${process.env.AWS_S3_BUCKET}`)
-    return {
-      s3: {
-        key: process.env.AWS_ACCESS_KEY_ID,
-        secret: process.env.AWS_SECRET_ACCESS_KEY,
-        bucket: process.env.AWS_S3_BUCKET
-      }
-    }
-  } else {
-    const file = `${tmpdir()}/data.json`
-    console.log('> using local filestorage')
-    console.log(`> data filePath: ${file}`)
-    return { file }
-  }
-}
 
 const server = createServer(async (req, res) => {
   const { pathname, query } = parse(req.url, true)
@@ -86,21 +64,10 @@ const server = createServer(async (req, res) => {
       console.log(error)
       res.end(req)
     }
-  }
-  if (Gun.serve(req, res)) {
-    res.writeHead(200, {'Content-Type': 'text/html'})
-    res.end(req)
   } else {
     handle(req, res)
   }
 })
-
-const gun = Gun({
-  web: server,
-  ...storeConfig()
-})
-
-gun.on('out', {get: {'#': {'*': ''}}})
 
 app.prepare()
   .then(() => {

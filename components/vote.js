@@ -2,16 +2,13 @@
 
 import { Component } from 'react'
 import Gun from 'gun/gun'
-import 'gun/lib/open'
 import 'gun/lib/then'
-import getConfig from 'next/config'
 import Layout from './layout'
 import { Link } from '../routes'
+import getConfig from 'next/config'
+const { publicRuntimeConfig: { GUNDB_URL } } = getConfig()
 
-const { publicRuntimeConfig: { HOST_URL } } = getConfig()
-const gun = Gun({
-  peers: `${HOST_URL}/gun`
-})
+const gun = Gun(GUNDB_URL)
 
 const todayDate = (date = new Date()) => `${date.getDate()}${date.getMonth()}${date.getYear()}`
 
