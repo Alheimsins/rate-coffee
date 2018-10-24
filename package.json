@@ -27,7 +27,7 @@
     "axios": "0.18.0",
     "gun": "0.9.99997",
     "next": "7.0.2",
-    "next-offline": "3.0.2",
+    "next-offline": "3.0.3",
     "next-routes": "1.4.2",
     "react": "16.5.2",
     "react-dom": "16.5.2",
