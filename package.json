@@ -29,8 +29,8 @@
     "next": "7.0.2",
     "next-offline": "3.0.10",
     "next-routes": "1.4.2",
-    "react": "16.6.2",
-    "react-dom": "16.6.2",
+    "react": "16.6.3",
+    "react-dom": "16.6.3",
     "react-icons": "3.2.2"
   },
   "now": {
