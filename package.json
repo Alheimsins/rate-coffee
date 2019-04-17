@@ -26,7 +26,7 @@
   "dependencies": {
     "axios": "0.18.0",
     "gun": "0.2019.416",
-    "next": "8.0.4",
+    "next": "8.1.0",
     "next-offline": "3.3.8",
     "next-routes": "1.4.2",
     "react": "16.8.6",
