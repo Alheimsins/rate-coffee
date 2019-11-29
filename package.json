@@ -25,7 +25,7 @@
   "license": "MIT",
   "dependencies": {
     "axios": "0.19.0",
-    "gun": "0.2019.930",
+    "gun": "0.2019.1120",
     "next": "9.1.4",
     "next-offline": "4.0.6",
     "next-routes": "1.4.2",
