@@ -5,7 +5,7 @@
 ###########################################################
 
 # Setting the base to nodejs 10
-FROM mhart/alpine-node:10@sha256:c3f0acda3a9e5166039073e5a1e17f9b24e55de7fdc2db545b0bbc63b16dba58
+FROM mhart/alpine-node:10@sha256:d2beb5af530b60fd6d197cbf50ae118a30c81e3141e80dabde2e4d5d845cf97f
 
 # Maintainer
 MAINTAINER Jonas Enge
