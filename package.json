@@ -24,7 +24,7 @@
   "keywords": [],
   "license": "MIT",
   "dependencies": {
-    "axios": "0.20.0",
+    "axios": "0.21.0",
     "gun": "0.2020.520",
     "next": "9.5.5",
     "next-offline": "5.0.2",
