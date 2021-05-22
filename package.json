@@ -42,6 +42,6 @@
     }
   },
   "devDependencies": {
-    "dotenv": "9.0.2"
+    "dotenv": "10.0.0"
   }
 }
